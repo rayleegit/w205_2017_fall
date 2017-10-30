@@ -1,0 +1,24 @@
+# Raymond lee hospital variability answer
+
+The 'Timely and Effective Care - Hospital' table contains hospital-specific
+scores for a variety measures. To see which measures have the highest
+variability, one method to do this would be to identify the measures that have
+the highest score range (difference between maximum score and minimum score).
+
+The first step to do this is to transform the scores into integers. Out of
+105,865 records, there are 52,863 records with a 'Not Available' 'Score'. This
+is a significant number of records, but does not prevent us from continuing
+our analysis - not all hospitals have scores for every measure. There are also
+a few more 'Score' values that are not a numerical value - we may exclude these
+because we won't be able to calculate a significant, comparable range for these
+measures:
+  'High (40,000 - 59,999 patients annually)' (598 records)
+  'Medium (20,000 - 39,999 patients annually)' (961 records)
+  'Very High (60,000+ patients annually)'	(680 records)
+  'Low (0 - 19,999 patients annually)'	(1211 records).
+
+The measures that have the highest variability (referenced in
+'hospital_variability.sql') are 'ED1' (1,209 range),'ED2' (628 range),
+'OP 18' (395 range), 'Median Time to Transfer to Another Facility for Acute
+Coronary Intervention' (393 range), and so on.
+

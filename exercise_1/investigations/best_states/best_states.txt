@@ -1,0 +1,10 @@
+# best states answer
+
+Following the reasoning from the "best hospitals" answer, we can then see
+which states have the highest number hospitals that have a
+'HCAHPS Consistency Score' equal to 20.
+
+Texas has the highest number of hospitals (71) that satisfy this criteria, 
+followed by Indiana (30), Wisconsin (29), Louisiana (27), Ohio (25),
+Alabama (24), and so on.
+
