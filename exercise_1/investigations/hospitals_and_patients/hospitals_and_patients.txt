@@ -1,0 +1,23 @@
+# hospitals and patients answer
+
+The 'Hospital General Information' table
+'Patient experience national comparison' and
+'Hospital overall rating' fields are great for answering this question.
+To see if there is a correlation between average hospital ratings and
+patient experience, we may simply compute the average 'Hospital overall rating'
+for each 'Patient experience national comparison' value.
+
+To do this, we must first transform the 'Hospital overall rating' field
+from 'string' to 'int'. There are 1,252 'Not Available' values in this field,
+out of 4,812 records - one may assume that not all hospitals have an overall
+rating.
+
+Once we transform the data, we then simply query (referenced in
+hospitals_and_patients.sql) the average 'Hospital overall rating' for each
+'Patient experience national comparison' value. When we do this, we find that
+'Patient experience national comparison' is in fact positively correlated with
+average scores for hospital quality:
+  'Above the national average'	3.676252319109462
+  'Same as the national average'	3.0859167404782992
+  'Below the national average'	2.4139534883720932.
+
