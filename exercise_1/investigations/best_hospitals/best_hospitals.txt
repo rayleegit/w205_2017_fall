@@ -1,0 +1,20 @@
+# best hospitals answer
+
+The 'HVBP_HCAHPS...' table, which contains patient experience domain measures
+is great for answering this question because the 'HCAHPS Consistency Score'
+field indexes each hospital based on its consistency across different measures.
+
+Through a cursory review, it appears that 'HCAHPS Consistency Score' is
+positively correlated with 'Overall Rating of Hospital Dimension Score'.
+Therefore, one may assume that the highest 'HCAHPS Consistency Score' a hospital
+may earn is 20.
+
+Out of 2,955 values, there are only 6 'Not Available' values. This provides
+adequate confidence in the data quality.
+
+A query (referenced in best_hospitals.sql) on the 'HVBP_HCAHPS...' table, with a
+filter on 'HCAHPS Consistency Score' equal to 20, returns 559 hospitals - these
+are the hospitals that have the most consistently high scores for a variety of
+procedures. Some of the hospitals included in this list are Franciscan Health
+Carmel, Anna Jaques Hospital, Hancock Regional Hospital, and Pinnacle Hospital.
+
