@@ -22,7 +22,7 @@ class WordCounter(Bolt):
         if cur.rowcount == 0:
             cur.execute("INSERT INTO tweetwordcount (word,count) VALUES (%s, 1)", (word, ));
 
-        conn.commit()
+        self.conn.commit()
 
         # Increment the local count
         self.counts[word] += 1
