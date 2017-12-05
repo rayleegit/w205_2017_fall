@@ -14,7 +14,7 @@ class WordCounter(Bolt):
         self.conn = psycopg2.connect(database="tcount", user="postgres", password="pass", host="localhost", port="5432")
 
     def process(self, tup):
-        word = tup.values[0]
+        word = str(tup.values[0])
         cur = self.conn.cursor()
 
         cur.execute("UPDATE tweetwordcount SET count=count+1 WHERE word=%s", (word, ))
@@ -29,5 +29,5 @@ class WordCounter(Bolt):
         self.emit([word, self.counts[word]])
 
         # Log the count - just to see the topology running
-        self.log('%s: %d', (word, self.counts[word]))
+        self.log("%s: %d", (word, self.counts[word], ))
 
